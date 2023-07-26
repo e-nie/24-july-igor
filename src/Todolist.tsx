@@ -30,16 +30,7 @@ export function Todolist(props: PropsType) {
                 return props.tasks.filter(el => el.isDone)
             default:
                 return props.tasks
-
-
         }
-        // if (filteredTasks === 'active') {
-        //     durchschlag= props.tasks.filter(el => !el.isDone)
-        // }
-        // if (filteredTasks === 'completed') {
-        //     durchschlag= props.tasks.filter(el => el.isDone)
-        // }
-        // return durchschlag
     }
 
 
@@ -52,7 +43,6 @@ export function Todolist(props: PropsType) {
         <ul>
             {filterFoo().map(el => {
                 return (
-
                     <li>
                         <button onClick = {() => props.removeTask(el.id)}>X</button>
                         <input type = "checkbox" checked = {el.isDone} />
